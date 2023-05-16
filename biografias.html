@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>Página Web</title>
     <link rel="stylesheet" href="styles.css">
     
@@ -17,23 +18,46 @@
 
 </head>
 <body>
-    <div class="header-bg">
-        <header class="header container">
+    <div class="w3-sidebar w3-bar-block w3-dark-grey w3-animate-left" style="display:none" id="mySidebar">
+        <button class="w3-bar-item w3-button w3-large"
+        onclick="w3_close()"> &times;</button>
+        <a href="#" class="w3-bar-item w3-button">Bio 1</a>
+        <a href="#" class="w3-bar-item w3-button">Bio 2</a>
+        <a href="#" class="w3-bar-item w3-button">Bio 3</a>
+      </div>
     
-            <div class="titulo-contenedor">
-                <h1 class="titulo">Biografias</h1>
-            </div>
-    
-            <div class="navegacion">
-                <ul class="links">
-                    <li class="link"><a href="index.html">Inicio</a></li>
-                    <li class="link"><a href="edificios.html">Edificios</a></li>
-                    <li class="link"><a href="espaciosUrbanos.html">Espacios Urbanos</a></li>
-                    <!-- <li class="link"><a href="biografias.html">Biografias</a></li> -->
-                </ul>
-            </div>
-    
-        </header>
+      <div>
+        <div class="header-bg">
+            <header class="header container">
+                <button class="w3-button w3-black w3-xlarge" onclick="w3_open()">&#9776;</button>                
+                <div class="titulo-contenedor">
+                    <h1 class="titulo">Biografias</h1>
+                </div>
+        
+                <div class="navegacion">
+                    <ul class="links">
+                        <li class="link"><a href="index.html" style="color: darkgray;">Inicio</a></li>
+                        <li class="link"><a href="edificios.html" style="color: darkgray;">Edificios</a></li>
+                        <li class="link"><a href="espaciosUrbanos.html" style="color: darkgray;">Espacios Urbanos</a></li>
+                        <!-- <li class="link"><a href="biografias.html">Biografias</a></li> -->
+                    </ul>
+                </div>
+        
+            </header>
+        </div>
     </div>
+
+
+
+    <script>
+        function w3_open() {
+            document.getElementById("mySidebar").style.display = "block";
+        }
+        function w3_close() {
+            document.getElementById("mySidebar").style.display = "none";
+        }
+    </script>
+
+
 </body>
 </html>
