@@ -1,19 +1,30 @@
-
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Roboto Condensed', sans-serif;;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto Condensed', sans-serif;;
 }
 
-.container {
-    width: 90%;
-    /* max-width: 1400px; */
-    margin: 0 auto;
+.header-bg {
+  background-color: rgb(0, 0, 0);
+}
+
+.my-container {
+  width: 85%;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .titulo {
-    text-align: center;
-    font-size: 45px;
+  text-align: center;
+  font-size: 23px;
+  text-align: left;
+  margin: 0;
+}
+
+.navegacion {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
 .seccion {
@@ -26,9 +37,7 @@ body {
     margin: 40px auto 0px;
 }
 
-.header-bg {
-    background-color: rgb(0, 0, 0);
-}
+
 
 .header {
     display: flex;
@@ -41,11 +50,14 @@ body {
 .links {
     list-style: none;
     display: flex;
+    align-items: center;
     gap: 25px;
 }
 
 .link {
-    font-size: 20px;
+  font-size: 20px;
+  text-decoration: none;
+  margin: 10px;
 }
 
 .link:hover {
@@ -198,11 +210,33 @@ input[type=text], input[type=password] {
 
   /* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
+  span.psw {
+      display: block;
+      float: none;
   }
+  .cancelbtn {
+      width: 100%;
+  }
+}
+
+
+
+.hero {
+  background-image: url(img/munal.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 450px;
+}
+@media (min-width: 767px) {
+  .hero {
+  height: 600px;
+    background-position: top;
+  }
+}
+
+.pósition {
+  display: flex;
+  justify-content: right;
+}
+
